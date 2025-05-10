@@ -1,0 +1,1 @@
+export const POINT_RADIUS = 4;
