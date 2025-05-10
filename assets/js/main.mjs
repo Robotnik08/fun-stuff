@@ -43,6 +43,21 @@ canvas.addEventListener("mousedown", (e) => {
     points.push({ x, y });
 });
 
+window.addEventListener("resize", () => {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+    otherCanvas.width = window.innerWidth;
+    otherCanvas.height = window.innerHeight;
+    ctx.strokeStyle = "white";
+    ctx.fillStyle = "white";
+    otherCtx.strokeStyle = "white";
+    otherCtx.fillStyle = "white";
+
+    center.x = window.innerWidth / 2;
+    center.y = window.innerHeight / 2;
+    tick = 0;
+});
+
 window.addEventListener("keydown", (e) => {
     if (e.repeat) return;
     switch (e.code) {
